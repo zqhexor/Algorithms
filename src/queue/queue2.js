@@ -1,6 +1,3 @@
-/**
-  * 队列：Queue
-  */
 // 方法二：对象版
 class Queue {
   #items;
