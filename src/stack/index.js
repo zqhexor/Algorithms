@@ -1,3 +1,6 @@
+/**
+ * 栈：Stack
+ */
 // 方法一: 数组版
 class Stack {
   #items = [];

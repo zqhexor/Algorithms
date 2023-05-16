@@ -1,50 +1,40 @@
+/**
+  * 队列：Queue
+  */
+// 方法一：数组版
 class Queue {
   #items;
-  #count;
-  #lowestCount;
 
   constructor() {
-    this.#items = {};
-    this.#count = 0;
-    this.#lowestCount = 0;
+    this.#items = [];
   }
 
   enqueue(element) {
-    this.#items[this.#count] = element;
-    this.#count++;
+    this.#items.push(element);
   }
 
   dequeue() {
-    if (this.isEmpty()) return undefined;
-
-    const element = this.#items[this.#lowestCount];
-    Reflect.deleteProperty(this.#items, this.#lowestCount);
-    this.#lowestCount++;
-    return element;
+    return this.#items.shift();
   }
 
   peek() {
-    if (this.isEmpty()) return undefined;
-
-    return this.#items[this.#lowestCount];
+    return this.#items[[0]];
   }
 
   isEmpty() {
-    return this.#count === this.#lowestCount;
+    return this.#items.length === 0;
   }
 
   size() {
-    return this.#count - this.#lowestCount;
+    return this.#items.length;
   }
 
   clear() {
-    this.#items = {};
-    this.#count = 0;
-    this.#lowestCount = 0;
+    this.#items = [];
   }
 
   toString() {
-    return Object.values(this.#items).toString();
+    return this.#items.toString();
   }
 }
 // 使用
