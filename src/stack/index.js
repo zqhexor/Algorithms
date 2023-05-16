@@ -38,3 +38,5 @@ stack.push(5);
 stack.push(8);
 console.log(stack.peek());
 console.log(stack.toString());
+stack.pop();
+console.log(stack.toString());
