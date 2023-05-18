@@ -2,7 +2,7 @@
   * 队列：Queue
   */
 // 方法一：数组版
-export class Queue {
+class Queue {
   #items;
 
   constructor() {
@@ -37,6 +37,8 @@ export class Queue {
     return this.#items.toString();
   }
 }
+
+module.exports = Queue;
 // 使用
 const queue = new Queue();
 console.log('queue.isEmpty:', queue.isEmpty());

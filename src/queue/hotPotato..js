@@ -1,4 +1,4 @@
-import { Queue } from './index.js';
+const Queue = require('./index.js');
 
 function hotPotato(elementList, num) {
   const eliminatedList = [];
