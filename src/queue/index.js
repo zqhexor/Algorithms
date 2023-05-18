@@ -2,7 +2,7 @@
   * 队列：Queue
   */
 // 方法一：数组版
-class Queue {
+export class Queue {
   #items;
 
   constructor() {
